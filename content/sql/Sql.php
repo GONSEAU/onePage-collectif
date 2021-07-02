@@ -10,10 +10,27 @@ class Sql extends DbConnect
     return $navBar[0];
   }
 
+  public function getAdmin($userName)
+  {
+    $request = $this->_pdo->prepare('SELECT * FROM admin WHERE userName = :userName');
+    $request->execute([
+      ':userName' => $userName
+    ]);
+    $admin = $request->fetchAll();
+    if(!empty($admin)){
+    return $admin[0];
+    }else{
+    return $admin;
+    }
+  }
+
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
   {
-    if (empty($navBar[0])) {
+    
+    $navBar = $this->getNav();
 
+    if (empty($navBar)) {
+      // Insert
       $request = $this->_pdo->prepare('INSERT INTO section_nav (item_logo, item_1, item_2, item_3, item_4, title ,calendly ) VALUES (:logo, :item_1, :item_2, :item_3, :item_4, :title, :calendly)');
       $request->execute([
         ':logo' => $logo,
@@ -24,7 +41,6 @@ class Sql extends DbConnect
         ':title' => $title,
         ':calendly' => $calendly
       ]);
-
 
       // Update
     } else {
