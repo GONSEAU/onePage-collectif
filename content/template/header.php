@@ -29,7 +29,7 @@
         </li>
       </ul>
     </div>
-    <button class="btn-lg btn-outline-light" type="submit">Réservation <i class="far fa-calendar-check"></i></button>
+    <button class="btn-lg btn-outline-light" type="submit"><a href="https://calendly.com/robin-gonseau/15min">Réservation <i class="far fa-calendar-check"></i></a></button>
   </div>
 </nav>
 </header>
