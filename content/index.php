@@ -6,8 +6,8 @@
 
   <meta name="Content-Type" content="UTF-8">
   <meta name="Content-Language" content="fr">
-  <meta name="Keywords" content="Le Lorem Ipsum est le faux ">
-  <meta name="Description" content="titleBarber shoptitle">
+  <meta name="Keywords" content="Barbier Barber-home Team Barber ">
+  <meta name="Description" content="Bienvenue chez Barber Home la Team Barber est prête à rendre votre poils soyeux à domicile">
   <meta name="Subject" content="barber shop">
   <meta name="Copyright" content="Robin">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -180,9 +180,9 @@
   <?php require_once('template/footer.php'); ?>
 
   <!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/robin-gonseau/15min', text: 'Schedule time with me', color: '#006bff', textColor: '#ffffff', branding: true }); }</script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/robin-gonseau/15min', text: 'Schedule time with me', color: '#006bff', textColor: '#ffffff', branding: true }); }</script> -->
 <!-- Calendly badge widget end -->
 
   <!-- SCRIPTS -->
