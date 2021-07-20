@@ -76,9 +76,9 @@
   </section>
 
   <!-- section cards Team Barber  -->
-  <section>
+  <section id="teamBarber">
     <h2>Team Barber</h2>
-    <div class="container" id="teamBarber">
+    <div class="container" >
 
       <!-- premiere card  -->
       <div class="row">
@@ -176,7 +176,9 @@
 
   </section>
 
+  <section id="contact">
   <?php require_once('form/contact.php'); ?>
+  </section>
 
   <?php require_once('template/footer.php'); ?>
 
@@ -184,19 +186,23 @@
   <!-- Calendly badge widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Calendly badge widget end
+<!-- Calendly badge widget end -->
 
   <!-- SCRIPTS -->
 
   <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
   <!--script font Awesom-->
   <script src="https://kit.fontawesome.com/666c6ef7e8.js" crossorigin="anonymous"></script>
 
   <!-- script jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+ 
+  <!-- script jqueryui-->
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="crossorigin="anonymous"></script>
+  
   <!-- My script -->
   <script src="assets/js/script.js"></script>
 

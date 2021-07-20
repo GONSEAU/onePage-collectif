@@ -25,7 +25,7 @@
           <a class="nav-link" href="#nosRéalisations"><?php echo $navBar['item_3']; ?></a>
         </li>
         <li class="nav-item padding20RL">
-          <a class="nav-link" href="#"><?php echo $navBar['item_4']; ?></a>
+          <a class="nav-link" href="#contact"><?php echo $navBar['item_4']; ?></a>
         </li>
       </ul>
     </div>

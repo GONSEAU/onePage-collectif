@@ -64,7 +64,35 @@ $(document).ready(function () {
     });
 
     $("#calendly-btn").click(
-        function calendly() { Calendly.showPopupWidget('https://calendly.com/robin-gonseau/15min'); return false; });
+        function calendly() { Calendly.showPopupWidget('https://calendly.com/robin-gonseau/15min'); return false; 
+    });
         // with another system application, decomment here
         // window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/robin-gonseau/15min', text: 'Prendre rendez-vous', color: '#006bff', textColor: '#ffffff' }); };
+
+
+        // Smooth scrolling using jQuery easing
+  $('a').click(function () {
+    
+    if (
+      location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname
+    ) {
+        console.log('test');
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      if (target.length) {
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top - 120,
+          },
+          10,
+          "easeInOutExpo"
+        );
+        return false;
+      }
+    }
+  });
+
+
+
+
 });

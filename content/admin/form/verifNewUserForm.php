@@ -2,7 +2,7 @@
 if( isset($_POST['userName']) && isset($_POST['password']) && isset($_POST['confirmPassword']) ){
     if(empty($_POST['userName']) || empty($_POST['password']) || empty($_POST['confirmPassword'])){
         $error= "Veuillez remplir tous les champs";
-        require 'newUserForm';
+        require 'newUserForm.php';
     }else {
         require_once '../../sql/Sql.php';
         $sql = new Sql;

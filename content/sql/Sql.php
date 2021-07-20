@@ -23,6 +23,9 @@ class Sql extends DbConnect
     if (empty($navBar)) {
       // Insert
       $request = $this->_pdo->prepare('INSERT INTO section_nav (id, item_logo, item_1, item_2, item_3, item_4, title ,calendly ) VALUES (1, :logo, :item_1, :item_2, :item_3, :item_4, :title, :calendly)');
+    }else{ //update
+      $request = $this->_pdo->prepare('UPDATE section_nav SET item_logo = :logo, item_1 = :item_1, item_2 = :item_2, item_3 = :item_3, item_4 = :item_4, title = :title, calendly = :calendly WHERE id=1');
+    } 
       $request->execute([
         ':logo' => $logo,
         ':item_1' => $item_1,
@@ -34,18 +37,16 @@ class Sql extends DbConnect
       ]);
 
       // Update
-    } else {
-      $request = $this->_pdo->prepare('UPDATE section_nav SET item_logo = :logo, item_1 = :item_1, item_2 = :item_2, item_3 = :item_3, item_4 = :item_4, title = :title, calendly = :calendly WHERE id=1');
-      $request->execute([
-        ':logo' => $logo,
-        ':item_1' => $item_1,
-        ':item_2' => $item_2,
-        ':item_3' => $item_3,
-        ':item_4' => $item_4,
-        ':title' => $title,
-        ':calendly' => $calendly
-      ]);
-    }
+      // $request->execute([
+      //   ':logo' => $logo,
+      //   ':item_1' => $item_1,
+      //   ':item_2' => $item_2,
+      //   ':item_3' => $item_3,
+      //   ':item_4' => $item_4,
+      //   ':title' => $title,
+      //   ':calendly' => $calendly
+      // ]);
+    
   }
 
   public function newAdmin($userName,$password) {

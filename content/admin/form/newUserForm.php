@@ -1,3 +1,5 @@
+
+
 <form action="verifNewUserForm.php" method="post">
   <div class="mb-3">
     <label for="" class="form-label">Username</label>
