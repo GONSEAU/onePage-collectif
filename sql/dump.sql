@@ -1,10 +1,10 @@
--- DUMPED ON 01/07/2021 at 13:57:06
+-- DUMPED ON 13/07/2021 at 23:02:08
 
--- MariaDB dump 10.19  Distrib 10.5.9-MariaDB, for Linux (x86_64)
+-- MariaDB dump 10.19  Distrib 10.5.11-MariaDB, for Linux (x86_64)
 --
 -- Host: mariadb    Database: niwee
 -- ------------------------------------------------------
--- Server version	10.5.9-MariaDB
+-- Server version	10.5.11-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,6 +24,31 @@
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `niwee` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 USE `niwee`;
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES (1,'John','password');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `section_nav`
@@ -51,7 +76,7 @@ CREATE TABLE `section_nav` (
 
 LOCK TABLES `section_nav` WRITE;
 /*!40000 ALTER TABLE `section_nav` DISABLE KEYS */;
-INSERT INTO `section_nav` VALUES (1,'freud.jpg','test','test','test','test','popocar','');
+INSERT INTO `section_nav` VALUES (1,'logoRobinFinal','A propos','Team barber','Nos réalisations','Nous contactez','Barber Home','test');
 /*!40000 ALTER TABLE `section_nav` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -64,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-01 11:57:07
+-- Dump completed on 2021-07-13 21:02:12

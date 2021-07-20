@@ -2,6 +2,7 @@
 require_once 'DbConnect.php';
 class Sql extends DbConnect
 {
+
   public function getNav()
   {
     $request = $this->_pdo->query('SELECT * FROM section_nav');
@@ -12,20 +13,6 @@ class Sql extends DbConnect
     }else{
     return $navBar;
     } 
-  }
-
-  public function getAdmin($userName)
-  {
-    $request = $this->_pdo->prepare('SELECT * FROM admin WHERE userName = :userName');
-    $request->execute([
-      ':userName' => $userName
-    ]);
-    $admin = $request->fetchAll();
-    if(!empty($admin)){
-    return $admin[0];
-    }else{
-    return $admin;
-    }
   }
 
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
@@ -60,4 +47,27 @@ class Sql extends DbConnect
       ]);
     }
   }
+
+  public function newAdmin($userName,$password) {
+    $req = $this->_pdo->prepare('INSERT INTO admin (userName,password) VALUE(:userName,:password)');
+    $req->execute([
+        ':userName' => $userName,
+        ':password' => $password
+    ]);
+  }
+
+  public function getAdmin($userName)
+  {
+    $request = $this->_pdo->prepare('SELECT * FROM admin WHERE userName = :userName');
+    $request->execute([
+      ':userName' => $userName
+    ]);
+    $admin = $request->fetchAll();
+    if(!empty($admin)){
+    return $admin[0];
+    }else{
+    return $admin;
+    }
+  }
+
 }

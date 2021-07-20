@@ -1,7 +1,7 @@
 
-<form action="veriForm.php" method="post">
+<form action="verifLoginForm.php" method="post">
   <div class="mb-3">
-    <label for="" class="form-label">User name</label>
+    <label for="" class="form-label">Username</label>
     <input type="text" class="form-control" id="userAdmin" aria-describedby="user" name='userName'>
   </div>
   <div class="mb-3">

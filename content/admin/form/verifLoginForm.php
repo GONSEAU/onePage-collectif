@@ -10,11 +10,11 @@ if( isset($_POST['userName']) && isset($_POST['password']) ){
         if(empty($user)) {
             echo "Erreur dans l'identifiant ou le mot de passe";
         }else{   
-            if( $_POST['password'] == $user['password']){ // Si les infos correspondent...
+            if( $_POST['password'] == $user['password']){ 
                 $_SESSION['user'] = $_POST['userName'];
                 header('Location: ../index.php');    
             }
-            else{ // Sinon
+            else{ 
                 echo "Erreur dans l'identifiant ou le mot de passe";
             }
         } 

@@ -12,6 +12,7 @@
   <meta name="Copyright" content="Robin">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="shortcut icon" href="assets/img/logoRobinBlack.png" type="image/x-icon">
 
   <!-- Link BOOTSTRAP -->
@@ -179,11 +180,11 @@
 
   <?php require_once('template/footer.php'); ?>
 
+
   <!-- Calendly badge widget begin -->
-<!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/robin-gonseau/15min', text: 'Schedule time with me', color: '#006bff', textColor: '#ffffff', branding: true }); }</script> -->
-<!-- Calendly badge widget end -->
+<!-- Calendly badge widget end
 
   <!-- SCRIPTS -->
 

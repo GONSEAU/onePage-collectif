@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+require_once 'loginForm.php';
+}else{
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -83,3 +91,4 @@ if (isset ($_POST['valider'])){
 
 </body>
 </html>
+<?php } ?>
