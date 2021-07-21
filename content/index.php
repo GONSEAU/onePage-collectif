@@ -43,7 +43,9 @@
       <h2>A PROPOS</h2>
       <div class="container ">
         <div class="row">
-          <div class="col-md-6 col-sm-12 img1"></div>
+          <div class="col-md-6 col-sm-12  ">
+            <img src="assets/img/test3.png" alt="" class="img1">
+          </div>
           <div class="col-md-6 col-sm-12 padding20RL">
             <h4>Une équipe à votre service</h4>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -68,7 +70,9 @@
               PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
-          <div class="col-md-6 col-sm-12 img2 "></div>
+          <div class="col-md-6 col-sm-12  ">
+          <img src="assets/img/test1.jpg" alt="" class="img2">
+          </div>
         </div>
       </div>
       <!-- bandeau -->

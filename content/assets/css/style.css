@@ -111,15 +111,17 @@ h2 {
     display: none;
 }
     /* section apropo */
-#apropos .img1 {
+ .img1 {
     height: 350px;
-    background: url('../img/test3.png') center center;
+    /* background: url('../img/test3.png') center center; */
+    width: 570px;
     background-size: cover;
 }
 
-#apropos .img2 {
+ .img2 {
     height: 350px;
-    background: url('../img/test1.jpg') center center;
+    /* background: url('../img/test1.jpg') center center; */
+    width: 570px;
     background-size: cover;
 }
 
