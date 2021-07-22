@@ -25,6 +25,17 @@ class Sql extends DbConnect
     return $Apropos;
     } 
   }
+  public function getSectionTeam()
+  {
+    $request = $this->_pdo->query('SELECT * FROM section_team');
+    $request->execute();
+    $teamCard = $request->fetchAll();
+    if(!empty($teamCard)){
+    return $teamCard[0];
+    }else{
+    return $teamCard;
+    } 
+  }
 
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
   {
@@ -68,6 +79,27 @@ class Sql extends DbConnect
         ':second_text' => $second_text,
         ':title_text_1' => $title_text_1,
         ':title_text_2' => $title_text_2
+      ]);
+  }
+
+  public function setSectionTeam($photo_member, $name_member, $text_member, $facebook_member, $twitter_member, $insta_member )
+  {
+    
+    $Apropos = $this->getSectionTeam();
+
+    if (empty($Apropos)) {
+      // Insert
+      $request = $this->_pdo->prepare('INSERT INTO section_team (id, photo_member, name_member, text_member, facebook_member, twitter_member, insta_member ) VALUES (1, : photo_member, :name_member, :text_member, :facebook_member, :twitter_member, :insta_member)');
+    }else{ //update
+      $request = $this->_pdo->prepare('UPDATE section_team SET photo_member = :photo_member, name_member = :name_member, text_member = :text_member, facebook_member = :facebook_member, twitter_member = :twitter_member, insta_member  = :insta_member  WHERE id=1');
+    } 
+      $request->execute([
+        ':photo_member' => $photo_member,
+        ':name_member' => $name_member,
+        ':text_member' => $text_member,
+        ':facebook_member' => $facebook_member,
+        ':twitter_member' => $twitter_member,
+        ':insta_member' => $insta_member       
       ]);
   }
 
