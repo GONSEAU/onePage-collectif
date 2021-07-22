@@ -112,17 +112,17 @@ h2 {
 }
     /* section apropo */
  .img1 {
-    height: 350px;
+    height: 310px;
     /* background: url('../img/test3.png') center center; */
     width: 570px;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
  .img2 {
-    height: 350px;
+    height: 310px;
     /* background: url('../img/test1.jpg') center center; */
     width: 570px;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 #apropos h4 {

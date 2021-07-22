@@ -14,6 +14,17 @@ class Sql extends DbConnect
     return $navBar;
     } 
   }
+  public function getSectionApropos()
+  {
+    $request = $this->_pdo->query('SELECT * FROM section_apropos');
+    $request->execute();
+    $Apropos = $request->fetchAll();
+    if(!empty($Apropos)){
+    return $Apropos[0];
+    }else{
+    return $Apropos;
+    } 
+  }
 
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
   {
@@ -36,17 +47,28 @@ class Sql extends DbConnect
         ':calendly' => $calendly
       ]);
 
-      // Update
-      // $request->execute([
-      //   ':logo' => $logo,
-      //   ':item_1' => $item_1,
-      //   ':item_2' => $item_2,
-      //   ':item_3' => $item_3,
-      //   ':item_4' => $item_4,
-      //   ':title' => $title,
-      //   ':calendly' => $calendly
-      // ]);
     
+  }
+  public function setSectionApropos($title, $first_image, $first_text, $second_image, $second_text, $title_text_1, $title_text_2)
+  {
+    
+    $Apropos = $this->getSectionApropos();
+
+    if (empty($Apropos)) {
+      // Insert
+      $request = $this->_pdo->prepare('INSERT INTO section_apropos (id, title, first_image, first_text, second_image, second_text, title_text_1 ,title_text_2 ) VALUES (1, :title, :first_image, :first_text, :second_image, :second_text, :title_text_1, :title_text_2)');
+    }else{ //update
+      $request = $this->_pdo->prepare('UPDATE section_apropos SET title = :title, first_image = :first_image, first_text = :first_text, second_image = :second_image, second_text = :second_text, title_text_1  = :title_text_1 , title_text_2 = :title_text_2 WHERE id=1');
+    } 
+      $request->execute([
+        ':title' => $title,
+        ':first_image' => $first_image,
+        ':first_text' => $first_text,
+        ':second_image' => $second_image,
+        ':second_text' => $second_text,
+        ':title_text_1' => $title_text_1,
+        ':title_text_2' => $title_text_2
+      ]);
   }
 
   public function newAdmin($userName,$password) {
