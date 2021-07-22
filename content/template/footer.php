@@ -33,7 +33,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3 bg-dark" style="background-color:#1F2D41;">
-    © 2021 Copyright : Barber-Home | <a href="../admin/form/loginForm.php">connexion</a>
+    © 2021 Copyright : Barber-Home | <a class="link-admin" href="../admin/form/loginForm.php">connexion</a>
   </div>
 
 </footer>

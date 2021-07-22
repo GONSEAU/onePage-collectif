@@ -4,8 +4,6 @@ $sql = new Sql;
 $navBar = $sql->getNav();
 $Apropos = $sql->getSectionApropos();
 $teamCard = $sql->getSectionTeam();
-// var_dump($teamCard);
-// exit;
 ?>
 
 

@@ -187,7 +187,7 @@ h2 {
 }
 
 .carousel-inner img {
-    height: 500px;  
+    height: 450px;  
     object-fit: cover;
     width: 100%;
 }
@@ -292,12 +292,23 @@ color: #1F2D41 ;
     font-weight: bolder;
 }
 
+/* footer */
+
+.link-admin{
+
+    text-decoration: none;
+    color: antiquewhite;
+}
+
 /* Mobile */
 
 @media (min-width: 801px) and (max-width: 1399px) {
     .apropo p {
         margin: 10px 15px;
     }
+    .backgroundHead{
+       background-position: 20% center;
+   }
 }
 
 @media (max-width: 767px) {
@@ -317,6 +328,14 @@ color: #1F2D41 ;
     .sec-container-reverse {
         flex-direction: column-reverse;
     }
+    .carousel-inner img {
+    height: 250px;  
+    object-fit: cover;
+    width: 100%;
+   }
+   .backgroundHead{
+       background-position: 25% center;
+   }
 }
 
 </style>
