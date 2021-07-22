@@ -59,7 +59,7 @@ h2 {
 }
 
 .btn-lg {
-    background-color: antiquewhite;
+    background-color: #ffffff;
     color: #1F2D41;
     border: 2px solid #1F2D41;
     opacity: 70%;
@@ -69,7 +69,7 @@ h2 {
     opacity: 100%;
     background-color: #1F2D41;
     color: antiquewhite;
-    border: 2px solid antiquewhite;
+    border: 2px solid #1F2D41;
 }
 
 /* navBar */
@@ -88,10 +88,8 @@ h2 {
 }
 
 #navbarSupportedContent a:hover {
-    font-weight: 600 ;
     text-decoration: underline 2px #1F2D41 ;
     text-underline-offset: 5px;
-    font-size: medium;
     transition: 200ms;
 }
 
@@ -261,6 +259,13 @@ color: #1F2D41 ;
     height: 65px;
 }
 
+.cardContactTel button:hover{
+
+    background-color: #ffffff;
+    color: #1F2D41;
+
+}
+
 .cardContactTel p {
     color: #1F2D41;
     padding: 25px 0 0 0;
@@ -269,14 +274,22 @@ color: #1F2D41 ;
 
 .cardContactTel a {
     color: antiquewhite;
+    text-decoration: none;
 }
+
+.cardContactTel a:hover {
+    color: #1F2D41;
+    text-decoration: none;
+}
+
 #infoForm .failedForm {
-color: rgb(216, 74, 74);
-font-weight: bolder;
+    color: rgb(216, 74, 74);
+    font-weight: bolder;
 }
+
 #infoForm .successForm {
-color: green;
-font-weight: bolder;
+    color: green;
+    font-weight: bolder;
 }
 
 /* Mobile */

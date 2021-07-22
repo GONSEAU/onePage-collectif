@@ -1,8 +1,11 @@
-<?php 
- require_once 'sql/Sql.php';
- $sql = new Sql;
- $navBar = $sql->getNav();
- $Apropos = $sql->getSectionApropos();
+<?php
+require_once 'sql/Sql.php';
+$sql = new Sql;
+$navBar = $sql->getNav();
+$Apropos = $sql->getSectionApropos();
+$teamCard = $sql->getSectionTeam();
+// var_dump($teamCard);
+// exit;
 ?>
 
 
@@ -20,7 +23,7 @@
   <meta name="Copyright" content="Robin">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="shortcut icon" href="assets/img/logoRobinBlack.png" type="image/x-icon">
 
   <!-- Link BOOTSTRAP -->
@@ -41,7 +44,7 @@
 
   <!-- HEADER template -->
 
-  <?php require_once('template/header.php');?>
+  <?php require_once('template/header.php'); ?>
 
   <div class="container-fluid backgroundHead"></div>
 
@@ -88,62 +91,29 @@
   <!-- section cards Team Barber  -->
   <section id="teamBarber">
     <h2>Team Barber</h2>
-    <div class="container" >
+    <div class="container">
 
       <!-- premiere card  -->
+
       <div class="row">
-        <div class="col-lg-4">
-          <div class="card">
-            <img src="assets/img/Weber.jpg" class="rounded-circle img-thumbnail " alt="profilePhoto" title="Weber">
-            <div class="card-body">
-              <h5 class="card-title text-center">Max</h5>
-              <p class="card-text text-center">Es gibt zwei Arten, Politik zu machen:
-                entweder eine für die Politik oder eine für die Politik.</p>
-            </div>
-            <div class="card-footer">
-              <div class="social">
-                <a href="https://www.facebook.com/"  target="_blank"><i class="fa fa-facebook-official"></i></a>
-                <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa fa-twitter" ></i></a>
-                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa fa-instagram" ></i></a>
+        <?php for ($i = 0; $i < count($teamCard); $i++): ?>
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="assets/img/<?php echo $teamCard[$i]['photo_member']; ?>.jpg" class="rounded-circle img-thumbnail " alt="profilePhoto" title="Weber">
+              <div class="card-body">
+                <h5 class="card-title text-center"><?php echo $teamCard[$i]['name_member']; ?></h5>
+                <p class="card-text text-center"><?php echo $teamCard[$i]['text_member']; ?></p>
+              </div>
+              <div class="card-footer">
+                <div class="social">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                  <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- seconde card  -->
-        <div class="col-lg-4">
-          <div class="card ">
-            <img src="assets/img/Karl.jpg" class="rounded-circle img-thumbnail" alt="profilePhoto" title="Karl">
-            <div class="card-body">
-              <h5 class="card-title text-center">Karl</h5>
-              <p class="card-text text-center">Es gibt keine richtige oder falsche Ernährung,
-                es gibt nur Grade der Ausbeutung der Menschheit.</p>
-            </div>
-            <div class="card-footer">
-              <div class="social">
-                <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa fa-instagram" ></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- troisieme card  -->
-        <div class="col-lg-4">
-          <div class="card ">
-            <img src="assets/img/freud.jpg" class="rounded-circle img-thumbnail" alt="profilePhoto" title="Freud">
-            <div class="card-body">
-              <h5 class="card-title text-center">Sig</h5>
-              <p class="card-text text-center">Artung papa maman ! Ich werde dich töten, um größer zu werden !</p>
-            </div>
-            <div class="card-footer">
-              <div class="social">
-                <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa fa-twitter" ></i></a>
-                <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php endfor; ?>
       </div>
     </div>
   </section>
@@ -187,32 +157,31 @@
   </section>
 
   <section id="contact">
-  <?php require_once('form/contact.php'); ?>
+    <?php require_once('form/contact.php'); ?>
   </section>
 
   <?php require_once('template/footer.php'); ?>
 
 
   <!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Calendly badge widget end -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <!-- Calendly badge widget end -->
 
   <!-- SCRIPTS -->
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
- 
+
   <!--script font Awesom-->
   <script src="https://kit.fontawesome.com/666c6ef7e8.js" crossorigin="anonymous"></script>
 
   <!-- script jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
- 
+
   <!-- script jqueryui-->
-  <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
   <!-- My script -->
   <script src="assets/js/script.js"></script>
 

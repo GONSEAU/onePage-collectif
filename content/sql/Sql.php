@@ -29,12 +29,8 @@ class Sql extends DbConnect
   {
     $request = $this->_pdo->query('SELECT * FROM section_team');
     $request->execute();
-    $teamCard = $request->fetchAll();
-    if(!empty($teamCard)){
-    return $teamCard[0];
-    }else{
+    $teamCard = $request->fetchAll();  
     return $teamCard;
-    } 
   }
 
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
