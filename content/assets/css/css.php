@@ -1,11 +1,12 @@
+<style>
 @font-face {
     font-family: "Barber Street light";
-    src: url('../fonts/Barber\ Street\ light_PersonalUseOnly.ttf');
+    src: url('assets/fonts/Barber\ Street\ light_PersonalUseOnly.ttf');
 }
 
 @font-face {
     font-family: "Barber Street";
-    src: url('../fonts/Barber\ Street\ _PersonalUseOnly.ttf');
+    src: url('assets/fonts/Barber\ Street\ _PersonalUseOnly.ttf');
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 }
 
 .backgroundHead {
-    background: url(../img/background.jpeg);
+    background: url('assets/img/background.jpeg');
     height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
@@ -112,17 +113,16 @@ h2 {
 }
     /* section apropo */
  .img1 {
-    height: 310px;
-    /* background: url('../img/test3.png') center center; */
-    width: 570px;
-    /* background-size: cover; */
+    height: 350px;
+     background: url('assets/img/<?php echo $Apropos['first_image'];?>.png') center center; 
+    
+     background-size: cover; 
 }
 
  .img2 {
-    height: 310px;
-    /* background: url('../img/test1.jpg') center center; */
-    width: 570px;
-    /* background-size: cover; */
+    height: 350px;
+     background: url('assets/img/<?php echo $Apropos['second_image'];?>.jpg') center center; 
+     background-size: cover; 
 }
 
 #apropos h4 {
@@ -305,3 +305,5 @@ font-weight: bolder;
         flex-direction: column-reverse;
     }
 }
+
+</style>

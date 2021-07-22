@@ -1,9 +1,5 @@
 
-<?php 
- require_once 'sql/Sql.php';
- $sql = new Sql;
- $navBar = $sql->getNav();
-?>
+
 <header>
 
 <nav class="navbar navbar-expand-lg  navbar-light  fixed-top">

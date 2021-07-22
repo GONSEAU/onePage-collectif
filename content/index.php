@@ -1,3 +1,11 @@
+<?php 
+ require_once 'sql/Sql.php';
+ $sql = new Sql;
+ $navBar = $sql->getNav();
+ $Apropos = $sql->getSectionApropos();
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -22,7 +30,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <?php require_once 'assets/css/css.php' ?>
 
   <!-- font -->
   <link rel="stylesheet" href="assets/fonts/Barber Street.ttf">
@@ -43,8 +51,7 @@
       <h2>A PROPOS</h2>
       <div class="container ">
         <div class="row">
-          <div class="col-md-6 col-sm-12  ">
-            <img src="assets/img/test3.png" alt="" class="img1">
+          <div class="col-md-6 col-sm-12 img1 ">
           </div>
           <div class="col-md-6 col-sm-12 padding20RL">
             <h4>Une équipe à votre service</h4>
@@ -70,8 +77,7 @@
               PageMaker including versions of Lorem Ipsum.
             </p>
           </div>
-          <div class="col-md-6 col-sm-12  ">
-          <img src="assets/img/test1.jpg" alt="" class="img2">
+          <div class="col-md-6 col-sm-12 img2  ">
           </div>
         </div>
       </div>
@@ -96,7 +102,7 @@
             </div>
             <div class="card-footer">
               <div class="social">
-                <a href="https://fr-fr.facebook.com/"  target="_blank"><i class="fa fa-facebook-official"></i></a>
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fa fa-facebook-official"></i></a>
                 <a href="https://twitter.com/?lang=fr" target="_blank"><i class="fa fa-twitter" ></i></a>
                 <a href="https://www.instagram.com/?hl=fr" target="_blank"><i class="fa fa-instagram" ></i></a>
               </div>

@@ -37,7 +37,7 @@
                 ADMIN PANEL
             </div>
                 <div class="login-form">
-                    <form action="verifLoginForm.php" method="post">
+                    <form action="verifForm/verifLoginForm.php" method="post">
                         <div class="form-group">                           
                             <input type="text" class="form-control" placeholder="Username" name='userName'>
                         </div>
