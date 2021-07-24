@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user'])){
-require_once 'form/loginForm.php';
+header('Location:form/loginForm.php');
 }else{
 
     require_once '../sql/Sql.php';
