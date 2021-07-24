@@ -1,6 +1,6 @@
 
 
-<form action="verifNewUserForm.php" method="post">
+<form action="verifForm/verifNewUserForm.php" method="post">
   <div class="mb-3">
     <label for="" class="form-label">Username</label>
     <input type="text" class="form-control" id="userName"  name='userName'>

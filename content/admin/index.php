@@ -29,8 +29,8 @@ require_once 'form/loginForm.php';
 <body>
 
 <div>
-    <button class="btn btn-outline-success btn-submit" ><a href="form/loginForm.php" target="_blanck" >Logout</a></button>
-    <button class="btn btn-outline-success btn-submit" ><a href="form/logout.php" target="_blanck" >Add user</a></button>
+    <button class="btn btn-outline-success btn-submit" ><a href="form/logout.php" target="_blanck" >Logout</a></button>
+    <button class="btn btn-outline-success btn-submit" ><a href="form/newUserForm.php" target="_blanck" >Add user</a></button>
 </div>
 
 <h1 class="text-center">Panel Admin</h1>
