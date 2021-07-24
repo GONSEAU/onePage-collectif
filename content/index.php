@@ -31,7 +31,7 @@ $teamCard = $sql->getSectionTeam();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- CSS -->
-  <?php require_once 'assets/css/css.php' ?>
+  <?php require_once 'assets/css/css.php'; ?>
 
   <!-- font -->
   <link rel="stylesheet" href="assets/fonts/Barber Street.ttf">
@@ -42,7 +42,7 @@ $teamCard = $sql->getSectionTeam();
 
   <!-- HEADER template -->
 
-  <?php require_once('template/header.php'); ?>
+  <?php require_once 'template/header.php'; ?>
 
   <div class="container-fluid backgroundHead"></div>
 
