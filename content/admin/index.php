@@ -8,6 +8,7 @@ header('Location:form/loginForm.php');
     $sql = new Sql;
     $navBar = $sql->getNav();
     $Apropos =  $sql->getSectionApropos();
+    $teamCard = $sql->getSectionTeam();
 
 
 ?>
@@ -36,7 +37,7 @@ header('Location:form/loginForm.php');
 <h1 class="text-center">Panel Admin</h1>
 
 
-
+<!-- form navBar -->
 <div class="container">
     <h2>Barre de navigation</h2>
     <form action="form/verifForm/verifNave.php" class="" method="post" id="meta-form">
@@ -77,7 +78,7 @@ header('Location:form/loginForm.php');
 </div>
 
 
-
+<!-- form section a propos -->
 <div class="container">
     <h2>Section 1</h2>
     <form action="form/verifForm/verifApropo.php" class="" method="post" id="meta-form">
@@ -115,7 +116,43 @@ header('Location:form/loginForm.php');
             <button type="submit" class="btn btn-outline-success btn-submit" id="submit_form_apropos" name="valider">Envoyer</button>   
         </div>
     </form>   
-    <button class="btn btn-outline-success btn-submit" ><a href="../index.php#<?= ( !empty($navBar) ) ? $navBar['item_1'] : '' ?>" target="_blanck" >Preview</a></button>
+    <button class="btn btn-outline-success btn-submit" ><a href="../index.php" target="_blanck" >Preview</a></button>
+</div>
+
+<!-- form section Team -->
+<div class="container">
+    <h2>Section 1</h2>
+    <form action="form/verifForm/verifTeam.php" class="" method="post" id="meta-form">
+        <div class="form-group ">
+            <label for="logo">Titre </label>
+            <input type="text" class="form-control" id="title" name="title" value="<?= ( !empty($teamCard) ) ? $teamCard['photo_member'] : '' ?>">
+        </div>
+        <div class="form-group ">
+            <label for="item_1">première image </label>
+            <input type="text" class="form-control" id="first_image" name="first_image" value="<?= ( !empty($teamCard) ) ? $teamCard['name_member'] : '' ?>">
+        </div>
+        <div class="form-group ">
+            <label for="item_2">premier text</label>
+            <input type="text" class="form-control" id="first_text" name="first_text" value="<?= ( !empty($teamCard) ) ? $teamCard['text_member'] : '' ?>">
+        </div>
+        <div class="form-group ">
+            <label for="item_3">deuxieme image</label>
+            <input type="text" class="form-control" id="second_image" name="second_image" value="<?= ( !empty($teamCard) ) ? $teamCard['facebook_member'] : '' ?>">
+        </div>
+        <div class="form-group">
+            <label for="item_4">deuxieme text </label>
+            <input type="text" class="form-control" id="second_text" name="second_text" value="<?= ( !empty($teamCard) ) ? $teamCard['twitter_member'] : '' ?>">
+        </div>
+        <div class="form-group">
+            <label for="title">titre premier paragraphe </label>
+            <input type="text" class="form-control" id="title_text_1"  name="title_text_1" value="<?= ( !empty($teamCard) ) ? $teamCard['insta_member'] : '' ?>">
+        </div>
+        <div class="form-group">
+            <br>
+            <button type="submit" class="btn btn-outline-success btn-submit" id="submit_form_apropos" name="valider">Envoyer</button>   
+        </div>
+    </form>   
+    <button class="btn btn-outline-success btn-submit" ><a href="../index.php" target="_blanck" >Preview</a></button>
 </div>
 
 

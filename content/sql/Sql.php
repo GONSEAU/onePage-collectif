@@ -81,9 +81,9 @@ class Sql extends DbConnect
   public function setSectionTeam($photo_member, $name_member, $text_member, $facebook_member, $twitter_member, $insta_member )
   {
     
-    $Apropos = $this->getSectionTeam();
+    $teamCard = $this->getSectionTeam();
 
-    if (empty($Apropos)) {
+    if (empty($teamCard)) {
       // Insert
       $request = $this->_pdo->prepare('INSERT INTO section_team (id, photo_member, name_member, text_member, facebook_member, twitter_member, insta_member ) VALUES (1, : photo_member, :name_member, :text_member, :facebook_member, :twitter_member, :insta_member)');
     }else{ //update

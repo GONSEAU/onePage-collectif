@@ -31,12 +31,12 @@
 
 </head>
 
-<body>
-<div class=" login-box">
+<body class="small-form">
+<div class=" login-box ">
             <div class=" login-title">
                 ADMIN PANEL
             </div>
-                <div class="login-form">
+                <div class="login-form ">
                     <form action="verifForm/verifLoginForm.php" method="post">
                         <div class="form-group">                           
                             <input type="text" class="form-control" placeholder="Username" name='userName'>
