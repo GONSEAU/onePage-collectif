@@ -80,7 +80,7 @@ header('Location:form/loginForm.php');
 
 <!-- form section a propos -->
 <div class="container">
-    <h2>Section 1</h2>
+    <h2>Section à propo</h2>
     <form action="form/verifForm/verifApropo.php" class="" method="post" id="meta-form">
         <div class="form-group ">
             <label for="logo">Titre </label>
@@ -121,7 +121,7 @@ header('Location:form/loginForm.php');
 
 <!-- form section Team -->
 <div class="container">
-    <h2>Section 1</h2>
+    <h2>Section team</h2>
     <form action="form/verifForm/verifTeam.php" class="" method="post" id="meta-form">
         <div class="form-group ">
             <label for="logo">Titre </label>
@@ -149,7 +149,7 @@ header('Location:form/loginForm.php');
         </div>
         <div class="form-group">
             <br>
-            <button type="submit" class="btn btn-outline-success btn-submit" id="submit_form_apropos" name="valider">Envoyer</button>   
+            <button type="submit" class="btn btn-outline-success btn-submit" id="submit_form_team" name="valider">Envoyer</button>   
         </div>
     </form>   
     <button class="btn btn-outline-success btn-submit" ><a href="../index.php" target="_blanck" >Preview</a></button>
