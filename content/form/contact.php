@@ -2,7 +2,7 @@
     <h2> Nous contacter !</h2>
     <div class="container ">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                     <div class="card cardContactTel">
                         <div class="card-body">
                         <img src="assets/img/logoRobinFinal.png" alt="" width="200" height="200" >

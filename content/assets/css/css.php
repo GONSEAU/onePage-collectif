@@ -282,7 +282,7 @@
         text-decoration: none;
     }
 
-    .cardContactTel a:hover {
+    .cardContactTel button:hover a {
         color: #1F2D41;
         text-decoration: none;
     }

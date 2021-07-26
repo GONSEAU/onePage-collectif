@@ -2,7 +2,7 @@
 require_once 'DbConnect.php';
 class Sql extends DbConnect
 {
-
+  // navBar
   public function getNav()
   {
     $request = $this->_pdo->query('SELECT * FROM section_nav');
@@ -13,24 +13,6 @@ class Sql extends DbConnect
     }else{
     return $navBar;
     } 
-  }
-  public function getSectionApropos()
-  {
-    $request = $this->_pdo->query('SELECT * FROM section_apropos');
-    $request->execute();
-    $Apropos = $request->fetchAll();
-    if(!empty($Apropos)){
-    return $Apropos[0];
-    }else{
-    return $Apropos;
-    } 
-  }
-  public function getSectionTeam()
-  {
-    $request = $this->_pdo->query('SELECT * FROM section_team');
-    $request->execute();
-    $teamCard = $request->fetchAll();  
-    return $teamCard;
   }
 
   public function setNav($logo, $item_1, $item_2, $item_3, $item_4, $title, $calendly)
@@ -53,9 +35,21 @@ class Sql extends DbConnect
         ':title' => $title,
         ':calendly' => $calendly
       ]);
-
-    
   }
+
+  // section à propos
+  public function getSectionApropos()
+  {
+    $request = $this->_pdo->query('SELECT * FROM section_apropos');
+    $request->execute();
+    $Apropos = $request->fetchAll();
+    if(!empty($Apropos)){
+    return $Apropos[0];
+    }else{
+    return $Apropos;
+    } 
+  }
+  
   public function setSectionApropos($title, $first_image, $first_text, $second_image, $second_text, $title_text_1, $title_text_2)
   {
     
@@ -78,6 +72,7 @@ class Sql extends DbConnect
       ]);
   }
 
+  // section Team barber
   public function setSectionTeam($photo_member, $name_member, $text_member, $facebook_member, $twitter_member, $insta_member )
   {
     
@@ -99,6 +94,15 @@ class Sql extends DbConnect
       ]);
   }
 
+  public function getSectionTeam()
+  {
+    $request = $this->_pdo->query('SELECT * FROM section_team');
+    $request->execute();
+    $teamCard = $request->fetchAll();  
+    return $teamCard;
+  }
+
+  // create new admin 
   public function newAdmin($userName,$password) {
     $req = $this->_pdo->prepare('INSERT INTO admin (userName,password) VALUE(:userName,:password)');
     $req->execute([

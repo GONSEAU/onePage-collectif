@@ -15,11 +15,10 @@ $teamCard = $sql->getSectionTeam();
 
   <meta name="Content-Type" content="UTF-8">
   <meta name="Content-Language" content="fr">
-  <meta name="Keywords" content="Barbier Barber-home Team Barber ">
+  <meta name="Keywords" content="Barbier Barber-home Team Barber Barbier coiffeur ">
   <meta name="Description" content="Bienvenue chez Barber Home la Team Barber est prête à rendre votre poils soyeux à domicile">
   <meta name="Subject" content="barber shop">
-  <meta name="Copyright" content="Robin">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="Copyright" content="Robin Gonseau">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="assets/img/logoRobinBlack.png" type="image/x-icon">
@@ -91,13 +90,13 @@ $teamCard = $sql->getSectionTeam();
     <h2>Team Barber</h2>
     <div class="container">
 
-      <!-- premiere card  -->
+      <!-- card  -->
 
       <div class="row">
         <?php for ($i = 0; $i < count($teamCard); $i++): ?>
           <div class="col-lg-4">
             <div class="card">
-              <img src="assets/img/<?php echo $teamCard[$i]['photo_member']; ?>.jpg" class="rounded-circle img-thumbnail " alt="profilePhoto" title="Weber">
+              <img src="assets/img/<?php echo $teamCard[$i]['photo_member']; ?>.jpg" class="rounded-circle img-thumbnail " alt="profilePhoto" >
               <div class="card-body">
                 <h5 class="card-title text-center"><?php echo $teamCard[$i]['name_member']; ?></h5>
                 <p class="card-text text-center"><?php echo $teamCard[$i]['text_member']; ?></p>
@@ -131,13 +130,13 @@ $teamCard = $sql->getSectionTeam();
         <!-- img carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/img/test1final.jpg" class="  " alt="...">
+            <img src="assets/img/test1final.jpg" alt="première image Carrousel">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/test2.jpg" class=" " alt="...">
+            <img src="assets/img/test2.jpg"  alt=" deuxième image Carrousel">
           </div>
           <div class="carousel-item">
-            <img src="assets/img/test3.png" class=" " alt="...">
+            <img src="assets/img/test3.png"  alt="troisiéme image Carrousel">
           </div>
         </div>
         <!-- btn nav carousel -->

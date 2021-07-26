@@ -9,34 +9,8 @@ $(document).ready(function () {
         }
     });
 
-    // // envoie Ajax Form
-    // $('#meta-form').submit(function (event) {
-    //     event.preventDefault();
-    //     var metaForm = $(this);
-    //     var formData = {
-    //         firstname: $("#firstname_").val(),
-    //         name: $("#name_").val(),
-    //         email: $("#email_").val(),
-    //         message: $("#message_").val()
-    //     };
-
-
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "../form/verif-form.php",
-    //         data: formData,
-    //         success: function (data) {
-    //             console.log($("#firstname_").val());              
-    //                 // $('.ajax-return-meta').empty();
-    //                 // $('.ajax-return-meta').append(data);
-    //                 // $("#getCodeModal").modal("show");
-    //                 // $("#getCode").html(data).show();
-    //         }
-    //     });
-
-    // });
-
-
+    
+    // ajax mail
 
     $("#submit").click(function (event) {
         event.preventDefault();
@@ -63,6 +37,8 @@ $(document).ready(function () {
         );
     });
 
+    // btn reservation calendly
+
     $("#calendly-btn").click(
         function calendly() { Calendly.showPopupWidget('https://calendly.com/robin-gonseau/15min'); return false; 
     });
@@ -71,12 +47,11 @@ $(document).ready(function () {
 
 
         // Smooth scrolling using jQuery easing
-  $('a').click(function () {
-    
+  $('a').click(function () {   
     if (
-      location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname
+      location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") 
+      && location.hostname == this.hostname
     ) {
-        console.log('test');
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
@@ -84,7 +59,7 @@ $(document).ready(function () {
           {
             scrollTop: target.offset().top - 120,
           },
-          10,
+          500,
           "easeInOutExpo"
         );
         return false;
