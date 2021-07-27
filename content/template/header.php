@@ -14,7 +14,7 @@
         </li>
         <h1 class="title"><?php echo $navBar['title']; ?></h1>
         <li class="nav-item ">
-          <a class="nav-link" href="#nosRéalisations"><?php echo $navBar['item_3']; ?></a>
+          <a class="nav-link" href="#nosRealisations"><?php echo $navBar['item_3']; ?></a>
         </li>
         <li class="nav-item ">
           <a class="nav-link" href="#contact"><?php echo $navBar['item_4']; ?></a>

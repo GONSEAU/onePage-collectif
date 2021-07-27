@@ -13,7 +13,7 @@ body {
    /* Login Form */
 .login-box {
     margin: 0 auto 0 auto;
-    background: #2b409e;
+    background: #1F2D41;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     width: 450px;
     display: flex;
@@ -55,7 +55,7 @@ body {
 }
 
 .btn-outline-primary:hover {
-    background-color: #1A2226;
+    background-color: #384449;
 }
 
 

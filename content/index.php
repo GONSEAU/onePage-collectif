@@ -64,27 +64,15 @@ $teamCard = $sql->getSectionTeam();
           <div class="col-md-6 col-sm-12 img1 ">
           </div>
           <div class="col-md-6 col-sm-12 padding20RL">
-            <h4>Une équipe à votre service</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has survived
-              not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-              PageMaker including versions of Lorem Ipsum.
+            <h4><?php echo $Apropos['title_text_1']; ?></h4>
+            <p><?php echo $Apropos['first_text']; ?>
             </p>
           </div>
         </div>
         <div class="row sec-container-reverse">
           <div class="col-md-6 col-sm-12 padding20RL">
-            <h4>C'est chez vous que ça se passe !</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book. It has survived
-              not only five centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-              PageMaker including versions of Lorem Ipsum.
+            <h4><?php echo $Apropos['title_text_2']; ?></h4>
+            <p><?php echo $Apropos['second_text']; ?>
             </p>
           </div>
           <div class="col-md-6 col-sm-12 img2  ">
@@ -126,7 +114,7 @@ $teamCard = $sql->getSectionTeam();
   </section>
 
   <!-- section carousel -->
-  <section class="bandeau-carousel" id="nosRéalisations">
+  <section class="bandeau-carousel" id="nosRealisations">
     <h2>Nos réalisations </h2>
 
     <div class="container ">
