@@ -1,4 +1,4 @@
--- DUMPED ON 27/07/2021 at 17:50:07
+-- DUMPED ON 28/07/2021 at 00:41:06
 
 -- MariaDB dump 10.19  Distrib 10.5.11-MariaDB, for Linux (x86_64)
 --
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
   `userName` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'John','$2y$10$n2TFHRPgeBS.F1M9SmEaj.j319hTAQMQsY0YIdNyF5IbNsyuve8N6'),(2,'pierre','$2y$10$KZjl4qMmmvGbIja45sNbBuDbuhhVp5gqW4dQvHMJ5Z.GdWibRlgGW'),(3,'will','$2y$10$FSB5TyPytlEQXMhgXN.M/OjMKg7ry7.ET68wVrriWLCjLr3Dg/qk2'),(4,'roro','$2y$10$ga.KNDJlGq262jaxzcAUS.AQqVNf1keeUTF8/JflA9iky3vtbAAjm'),(5,'riri','$2y$10$68kJ9KEz2bj9jm5LRGzqHO8XVQM38IelyvIFXbIUOcfNfD7T7PWTK'),(6,'loulou','$2y$10$NNDPhbzqRvTAq1AthPeFPO/L/Pe3M2QLgcOjf6Hi9EYuYljY9/m1G'),(7,'test','$2y$10$fHz47M3qQVxgL.gfDLRQg.gKzK7VxGiZVbepOyu2/lBQ/TW5Sn0j2'),(10,'ruru','$2y$10$6eN79RvSALThmvJ1nb333OeoayBtbjF2r59pedWR8T.2ZkfLRK5u.');
+INSERT INTO `admin` VALUES (1,'John','$2y$10$n2TFHRPgeBS.F1M9SmEaj.j319hTAQMQsY0YIdNyF5IbNsyuve8N6'),(2,'pierre','$2y$10$KZjl4qMmmvGbIja45sNbBuDbuhhVp5gqW4dQvHMJ5Z.GdWibRlgGW'),(3,'will','$2y$10$FSB5TyPytlEQXMhgXN.M/OjMKg7ry7.ET68wVrriWLCjLr3Dg/qk2'),(4,'roro','$2y$10$ga.KNDJlGq262jaxzcAUS.AQqVNf1keeUTF8/JflA9iky3vtbAAjm'),(5,'riri','$2y$10$68kJ9KEz2bj9jm5LRGzqHO8XVQM38IelyvIFXbIUOcfNfD7T7PWTK'),(6,'loulou','$2y$10$NNDPhbzqRvTAq1AthPeFPO/L/Pe3M2QLgcOjf6Hi9EYuYljY9/m1G'),(7,'test','$2y$10$fHz47M3qQVxgL.gfDLRQg.gKzK7VxGiZVbepOyu2/lBQ/TW5Sn0j2'),(10,'ruru','$2y$10$6eN79RvSALThmvJ1nb333OeoayBtbjF2r59pedWR8T.2ZkfLRK5u.'),(11,'je suis fatigue','$2y$10$rmHq2dFbfzruvpbRXOWWGOp8qGW1Oj5nEuQEtNjpeB5tlH2u8uPQW'),(12,'popo','$2y$10$jwgi4C98pWo.7YrILRmtNOLA8l9qWr9Rop.0tzZ5TTGgziCExFBBi'),(13,'pascal','$2y$10$zAfWEtDyZNRHtr8rB4gVD.KGdkVjz39P/kVt799MSUy5QqkJYIrwW');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,4 +148,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-27 15:50:09
+-- Dump completed on 2021-07-27 22:41:08
