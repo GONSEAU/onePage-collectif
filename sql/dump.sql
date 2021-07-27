@@ -1,4 +1,4 @@
--- DUMPED ON 27/07/2021 at 12:40:06
+-- DUMPED ON 27/07/2021 at 14:12:14
 
 -- MariaDB dump 10.19  Distrib 10.5.11-MariaDB, for Linux (x86_64)
 --
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
   `userName` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'John','$2y$10$n2TFHRPgeBS.F1M9SmEaj.j319hTAQMQsY0YIdNyF5IbNsyuve8N6');
+INSERT INTO `admin` VALUES (1,'John','$2y$10$n2TFHRPgeBS.F1M9SmEaj.j319hTAQMQsY0YIdNyF5IbNsyuve8N6'),(2,'pierre','$2y$10$KZjl4qMmmvGbIja45sNbBuDbuhhVp5gqW4dQvHMJ5Z.GdWibRlgGW'),(3,'will','$2y$10$FSB5TyPytlEQXMhgXN.M/OjMKg7ry7.ET68wVrriWLCjLr3Dg/qk2'),(4,'roro','$2y$10$ga.KNDJlGq262jaxzcAUS.AQqVNf1keeUTF8/JflA9iky3vtbAAjm'),(5,'riri','$2y$10$68kJ9KEz2bj9jm5LRGzqHO8XVQM38IelyvIFXbIUOcfNfD7T7PWTK'),(6,'loulou','$2y$10$NNDPhbzqRvTAq1AthPeFPO/L/Pe3M2QLgcOjf6Hi9EYuYljY9/m1G'),(7,'test','$2y$10$fHz47M3qQVxgL.gfDLRQg.gKzK7VxGiZVbepOyu2/lBQ/TW5Sn0j2');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,7 +106,7 @@ CREATE TABLE `section_nav` (
 
 LOCK TABLES `section_nav` WRITE;
 /*!40000 ALTER TABLE `section_nav` DISABLE KEYS */;
-INSERT INTO `section_nav` VALUES (1,'logoRobinFinal','A propo','Team barber','Nos réalisations','Nous contactez','Barber Home','');
+INSERT INTO `section_nav` VALUES (1,'logoRobinFinal','A propos','Team barber','Nos réalisations','Nous contacter','Barber Home','');
 /*!40000 ALTER TABLE `section_nav` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,4 +148,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-27 10:40:07
+-- Dump completed on 2021-07-27 12:12:16

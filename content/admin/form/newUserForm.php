@@ -1,5 +1,4 @@
-
-
+<button class="btn btn-outline-success btn-submit" ><a href="../index.php" >Return to PanelAdmin</a></button>
 <form action="verifForm/verifNewUserForm.php" method="post">
   <div class="mb-3">
     <label for="" class="form-label">Username</label>

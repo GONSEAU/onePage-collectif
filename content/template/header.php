@@ -1,7 +1,3 @@
-
-
-<header>
-
 <nav class="navbar navbar-expand-lg  navbar-light justify-content-center fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand mx-auto "  href="#"> <img src="assets/img/<?php echo $navBar['item_logo']; ?>.png" alt="" width="100" height="100" class="logo d-inline-block"></a>
@@ -28,4 +24,6 @@
     <button id="calendly-btn" class="btn-lg btn-outline-light mx-auto" type="submit">Réservation <i class="far fa-calendar-check"></i></button>
   </div>
 </nav>
-</header>
+
+
+

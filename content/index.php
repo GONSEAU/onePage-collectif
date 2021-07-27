@@ -31,6 +31,7 @@ $teamCard = $sql->getSectionTeam();
 
   <!-- CSS -->
   <?php require_once 'assets/css/css.php'; ?>
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- font -->
   <link rel="stylesheet" href="assets/fonts/Barber Street.ttf">
@@ -40,15 +41,24 @@ $teamCard = $sql->getSectionTeam();
 <body>
 
   <!-- HEADER template -->
-
+  <header class="container-fluid backgroundHead">
   <?php require_once 'template/header.php'; ?>
+  
+  
 
-  <div class="container-fluid backgroundHead"></div>
+  
+
+  <a id="arrow" href="#apropos" class="fas fa-chevron-circle-down"></a> 
+      
+    
+  
+
+  </header>
 
   <!-- section à propo  -->
   <section>
     <div id="apropos" class="bandeau">
-      <h2>A PROPOS</h2>
+      <h2><?php echo $Apropos['title']; ?></h2>
       <div class="container ">
         <div class="row">
           <div class="col-md-6 col-sm-12 img1 ">
